@@ -4,7 +4,7 @@ import { HistoryRecord } from '../types/vessel';
 // Fetch vessels from backend API
 export const fetchVesselsFromBackend = async (): Promise<Vessel[]> => {
   try {
-    const response = await fetch('/api/vessels'); // Ganti endpoint sesuai backend kamu
+    const response = await fetch('/api/vessels?key=fb8b73a2c99cf526df1ad79865e796f365ae883c'); // Ganti endpoint sesuai backend kamu
     if (!response.ok) throw new Error('Failed to fetch vessels');
     const vessels = await response.json();
     // vessels berupa object dengan struktur { data: Vessel[], message, success }, ambil data-nya saja
